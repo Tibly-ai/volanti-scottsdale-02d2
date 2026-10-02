@@ -272,8 +272,7 @@
 
 
 
-  <!-- block:header -->
-<header data-test="header" id="header" class="
+  <header data-test="header" id="header" class="
       
         
       
@@ -465,16 +464,16 @@
       
       
       
-        --solidHeaderBackgroundColor: hsla(var(--black-hsl), 1);
+        --solidHeaderBackgroundColor: hsla(var(--white-hsl), 1);
       
       
-        --solidHeaderNavigationColor: hsla(var(--white-hsl), 1);
+        --solidHeaderNavigationColor: hsla(var(--black-hsl), 1);
       
       
-        --gradientHeaderBackgroundColor: hsla(var(--black-hsl), 1);
+        --gradientHeaderBackgroundColor: hsla(var(--white-hsl), 1);
       
       
-        --gradientHeaderNavigationColor: hsla(var(--white-hsl), 1);
+        --gradientHeaderNavigationColor: hsla(var(--black-hsl), 1);
       
     ">
     <svg style="display:none" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
@@ -550,7 +549,7 @@
 
 </svg>
     
-<style>.header-inner{padding-top:6px;padding-bottom:6px;}</style>
+<style>#header, #header .header-background, #header .header-background-solid, #header .header-menu-bg{background-color:#000 !important;} #header a, #header button, #header .header-nav-folder-title, #header .header-nav-folder-title-text, #header .header-menu-nav-item-content, #header .header-skip-link{color:#fff !important;} #header .header-actions .btn{color:#fff !important;border-color:#fff !important;} #header .burger-inner > div{background-color:#fff !important;} #header .header-nav-folder-content{background-color:#000 !important;border:1px solid rgba(255,255,255,.25) !important;border-radius:10px !important;padding:.6rem .4rem !important;box-shadow:0 10px 24px rgba(0,0,0,.45) !important;overflow:hidden;} #header .header-nav-folder-item a{border-radius:6px !important;padding:.35rem .75rem !important;display:block;} #header .header-nav-folder-item a:hover{background-color:rgba(255,255,255,.12) !important;} #header .header-actions .btn{border-radius:6px !important;padding:.45rem 1rem !important;} #header .header-title-logo img{height:44px !important;width:auto !important;max-height:44px !important;padding:4px !important;box-sizing:content-box !important;} @media (max-width:767px){#header .header-title-logo img{height:30px !important;max-height:30px !important;}} #header .header-nav-item a, #header .header-nav-folder-title, #header .header-nav-folder-item a, #header .header-menu-nav-item a{font-size:14px !important;} #header .header-inner{padding-top:6px !important;padding-bottom:6px !important;}</style>
 <div class="sqs-announcement-bar-dropzone"></div>
 
     <div class="header-announcement-bar-wrapper">
@@ -682,8 +681,8 @@
   
 
 
-    <div class="header-nav-item--active header-nav-item header-nav-item--external">
-      <a data-animation-role="header-element" data-tibly-styled="717465d5-5c11-40b7-aa7e-b2f8f95048cd" href="/menus" style="font-size:18px;font-size:14px;font-size:15px;font-size:14px;font-size:16px" aria-current="page">Menus</a>
+    <div class="header-nav-item header-nav-item--external">
+      <a data-animation-role="header-element" href="/menus">Menus</a>
     </div>
   
 
@@ -751,7 +750,9 @@
 
 
 
-    
+    <div class="header-nav-item header-nav-item--external">
+      
+    </div>
   
 
 
@@ -768,13 +769,17 @@
 
 
   
-    
+    <div class="header-nav-item header-nav-item--collection">
+      
+    </div>
   
   
   
 
 
-    
+    <div class="header-nav-item header-nav-item--external">
+      
+    </div>
   
 
 
@@ -810,7 +815,7 @@
 
               
                 <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-                  <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" data-tibly-styled="73224de4-c34e-4ad8-9bd3-d51cbea5e2d7" href="https://www.sevenrooms.com/explore/volanti/reservations/create/search/" style="font-size:14px;font-size:12px;font-size:13px;font-size:14px;font-size:15px" target="_blank">
+                  <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="https://www.sevenrooms.com/explore/volanti/reservations/create/search/" target="_blank">
                     RESERVE A TABLE
                   </a>
                 </div>
@@ -979,8 +984,8 @@
   
 
 
-    <div class="header-nav-item--active header-nav-item header-nav-item--external">
-      <a data-animation-role="header-element" href="/menus" aria-current="page">Menus</a>
+    <div class="header-nav-item header-nav-item--external">
+      <a data-animation-role="header-element" href="/menus">Menus</a>
     </div>
   
 
@@ -1048,7 +1053,9 @@
 
 
 
-    
+    <div class="header-nav-item header-nav-item--external">
+      
+    </div>
   
 
 
@@ -1065,13 +1072,17 @@
 
 
   
-    
+    <div class="header-nav-item header-nav-item--collection">
+      
+    </div>
   
   
   
 
 
-    
+    <div class="header-nav-item header-nav-item--external">
+      
+    </div>
   
 
 
@@ -1306,8 +1317,8 @@
     
       
         
-          <div class="header-menu-nav-item--active container header-menu-nav-item header-menu-nav-item--external">
-            <a href="/menus" aria-current="page">Menus</a>
+          <div class="container header-menu-nav-item header-menu-nav-item--external">
+            <a href="/menus">Menus</a>
           </div>
         
       
@@ -1460,7 +1471,6 @@
       //# sourceURL=reserveSpaceForHeader.js
     </script>
   </header>
-<!-- /block:header -->
 
 
 
@@ -4681,8 +4691,7 @@
         
       </main>
       
-        <!-- block:footer -->
-<footer class="sections" id="footer-sections" data-footer-sections="">
+        <footer class="sections" id="footer-sections" data-footer-sections="">
   
   
   
@@ -4775,7 +4784,82 @@
       
       
       
-      <div style="max-width:1200px;margin:0 auto;padding:3rem 1.5rem;width:100%;"><div style="display:flex;flex-wrap:wrap;gap:2.5rem;justify-content:space-between;text-align:left;"><div style="min-width:200px;flex:1 1 200px;"><img src="https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/44751bacd7902a40f271d026bd958233.webp" alt="Volanti Scottsdale logo" loading="lazy" style="width:100%;max-width:180px;height:auto;display:block;margin:0 0 1rem;width:66px;max-width:100%;height:59px;width:64px;max-width:100%" data-tibly-styled="387a1d14-2b78-4ec5-8be2-aaddc9ff2ee8"/><p style="margin:0 0 0.5rem;line-height:1.6;">15000 North Airport Drive<br/>Scottsdale, AZ 85260</p><p style="margin:0;"><a href="tel:4806572426">480.657.2426</a></p></div><div style="min-width:150px;flex:1 1 150px;"><h3 style="font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1rem;">Dine</h3><p style="margin:0 0 0.5rem;"><a href="/menus">Menus</a></p><p style="margin:0 0 0.5rem;"><a href="/9967610">Reservations</a></p><p style="margin:0;"><a href="https://www.toasttab.com/volanti-15000-n-airport-dr/giftcards">Gift Cards</a></p></div><div style="min-width:150px;flex:1 1 150px;"><h3 style="font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1rem;">Experiences</h3><p style="margin:0 0 0.5rem;"><a href="/helicopter">Helicopter Tour</a></p><p style="margin:0 0 0.5rem;"><a href="/wine-lockers">Wine Lockers</a></p><p style="margin:0 0 0.5rem;"><a href="https://www.volantijetcatering.com" target="_blank">Jet Catering</a></p><p style="margin:0;"><a href="https://volantihangarevents.com">Events</a></p></div><div style="min-width:150px;flex:1 1 150px;"><h3 style="font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1rem;">More</h3><p style="margin:0 0 0.5rem;"><a href="/blog">Blog</a></p><p style="margin:0 0 0.5rem;"><a href="/faqs">FAQs</a></p><p style="margin:0 0 0.5rem;"><a href="https://jobs.appone.com/Volanti" target="_blank">Careers</a></p><p style="margin:0;"><a href="https://runtherunwayaz.org" target="_blank">Run the Runway</a></p></div></div><div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.2);font-size:0.85rem;text-align:center;">© Volanti Scottsdale. All rights reserved.</div></div>
+      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-60f60af93a8c3a2ffa489cf7"><div class="row sqs-row"><div class="col sqs-col-0 span-0"></div><div class="col sqs-col-12 span-12"><div class="row sqs-row"><div class="col sqs-col-2 span-2"><div class="sqs-block collectionlink-block sqs-block-collectionlink" data-block-type="12" id="block-yui_3_17_2_1_1627343899745_6642"><div class="sqs-block-content">
+
+
+
+
+  
+  <div class="collectionlink-content">
+    <div class="collectionlink-title">
+      <a href="/menus">Menus</a>
+    </div>
+    
+      
+    
+  </div>
+
+</div></div></div><div class="col sqs-col-3 span-3"><div class="sqs-block collectionlink-block sqs-block-collectionlink" data-block-type="12" id="block-yui_3_17_2_1_1627343899745_6140"><div class="sqs-block-content">
+
+
+
+
+  
+  <div class="collectionlink-content">
+    <div class="collectionlink-title">
+      <a href="/9967610">Reservations</a>
+    </div>
+    
+      
+    
+  </div>
+
+</div></div></div><div class="col sqs-col-3 span-3"><div class="sqs-block collectionlink-block sqs-block-collectionlink" data-block-type="12" id="block-yui_3_17_2_1_1627343899745_5660"><div class="sqs-block-content">
+
+
+
+
+  
+  <div class="collectionlink-content">
+    <div class="collectionlink-title">
+      <a href="/helicopter">Helicopter Tour</a>
+    </div>
+    
+      
+    
+  </div>
+
+</div></div></div><div class="col sqs-col-3 span-3"><div class="sqs-block collectionlink-block sqs-block-collectionlink" data-block-type="12" id="block-yui_3_17_2_1_1627343899745_5181"><div class="sqs-block-content">
+
+
+
+
+  
+  <div class="collectionlink-content">
+    <div class="collectionlink-title">
+      <a href="/wine-lockers">Wine Lockers</a>
+    </div>
+    
+      
+    
+  </div>
+
+</div></div></div><div class="col sqs-col-1 span-1"><div class="sqs-block collectionlink-block sqs-block-collectionlink" data-block-type="12" id="block-yui_3_17_2_1_1627343899745_4668"><div class="sqs-block-content">
+
+
+
+
+  
+  <div class="collectionlink-content">
+    <div class="collectionlink-title">
+      <a href="/faqs">FAQs</a>
+    </div>
+    
+      
+    
+  </div>
+
+</div></div></div></div></div></div></div>
     </div>
   
   </div>
@@ -4784,7 +4868,6 @@
 
   
 </footer>
-<!-- /block:footer -->
 
       
     </div>
