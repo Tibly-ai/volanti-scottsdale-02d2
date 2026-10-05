@@ -47,152 +47,13 @@
   "sameAs": ["https://www.instagram.com/volantiscottsdale"]
 }
 </script>
-<style>
-:root{
-  --v-bg:#dcd3c8;
-  --v-ink:#35302d;
-  --v-green:#3f4c38;
-  --v-serif:"Libre Caslon Text","Adobe Caslon Pro",Georgia,"Times New Roman",serif;
-  --v-sans:"Jost","Commuters Sans","Helvetica Neue",Arial,sans-serif;
-  --v-compass:url("https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/44751bacd7902a40f271d026bd958233.webp");
-}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--v-bg);color:var(--v-ink);font-family:var(--v-serif);font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-img{max-width:100%;height:auto;display:block}
-h1,h2,h3,p{margin:0}
-.v-wrap{width:min(1200px,calc(100% - 48px));margin:0 auto}
-.v-kicker{font-family:var(--v-sans);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;line-height:1.3}
-.v-arrow-link{display:inline-block;font-family:var(--v-sans);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;line-height:1.7}
-.v-arrow-link::after{content:"\2192";margin-left:.45em}
-.v-arrow-link:hover{text-decoration:underline;text-underline-offset:4px}
-.v-mask{display:inline-block;background-color:currentColor;-webkit-mask:var(--v-compass) center/contain no-repeat;mask:var(--v-compass) center/contain no-repeat}
-
-/* Header */
-.v-header{position:sticky;top:0;z-index:50;background:var(--v-bg);border-bottom:1px solid rgba(53,48,45,.18)}
-.v-header__bar{display:flex;align-items:center;height:73px;padding:0 35px}
-.v-header__logo{color:var(--v-green);display:flex;align-items:center;text-decoration:none}
-.v-header__logo .v-mask{width:40px;height:40px}
-.v-nav{flex:1;display:flex;justify-content:center;align-items:center;gap:0;list-style:none;margin:0;padding:0}
-.v-nav a{display:block;padding:0 15px;font-size:18px;text-decoration:none;white-space:nowrap}
-.v-nav a:hover{text-decoration:underline;text-underline-offset:5px}
-.v-nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:5px}
-.v-header__cta{font-family:var(--v-sans);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--v-bg);background:var(--v-green);text-decoration:none;padding:7px 18px;line-height:16px;white-space:nowrap}
-.v-header__cta:hover{background:#4b5a43}
-.v-burger{display:none;width:44px;height:44px;margin-left:auto;background:none;border:0;padding:10px;cursor:pointer;color:var(--v-ink)}
-.v-burger span{display:block;height:2px;background:currentColor;margin:5px 0}
-.v-nav-toggle{display:none}
-
-/* Hero */
-.v-hero{position:relative;height:min(827px,calc(100vh - 73px));min-height:520px;overflow:hidden;background:#2a2622}
-.v-hero__slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:v-slide 18s infinite}
-.v-hero__slide:nth-child(1){background-position:50% 42%;animation-delay:0s}
-.v-hero__slide:nth-child(2){animation-delay:6s}
-.v-hero__slide:nth-child(3){animation-delay:12s}
-@keyframes v-slide{0%{opacity:0}5%{opacity:1}33.33%{opacity:1}40%{opacity:0}100%{opacity:0}}
-.v-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.28) 0%,rgba(0,0,0,.12) 55%,rgba(0,0,0,.35) 100%)}
-.v-hero__inner{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
-.v-hero__wordmark{width:min(560px,80vw);height:auto;filter:drop-shadow(0 2px 14px rgba(0,0,0,.35))}
-.v-hero__tag{margin-top:26px;color:#fff;font-family:var(--v-sans);font-weight:500;font-size:14px;letter-spacing:.32em;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.5)}
-.v-hero__down{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:3;width:34px;height:27px;color:#fff;filter:drop-shadow(0 1px 6px rgba(0,0,0,.5))}
-.v-hero__down svg{width:100%;height:100%}
-@media (prefers-reduced-motion:reduce){.v-hero__slide{animation:none}.v-hero__slide:nth-child(1){opacity:1}}
-
-/* Intro */
-.v-intro{position:relative;padding:60px 0 27px;text-align:center}
-.v-intro__title{font-weight:400;font-size:36px;line-height:1.4;text-transform:uppercase;max-width:1060px;margin:0 auto}
-.v-intro__title em{font-style:italic;text-transform:none}
-.v-intro__sub{margin-top:28px}
-.v-intro__badge{position:absolute;right:0;top:60px;width:134px;height:154px;display:flex;align-items:center;justify-content:center;color:var(--v-green);opacity:.55}
-.v-intro__badge .v-mask{width:134px;height:134px}
-
-/* Two columns */
-.v-cols{display:grid;grid-template-columns:1fr 1fr;gap:45px;padding:54px 0}
-.v-col img,.v-col .v-map{width:100%;height:auto;aspect-ratio:665/800;object-fit:cover}
-.v-map{display:block;border:0;filter:grayscale(1) sepia(.42) brightness(1.04) contrast(.92);background:#cfc6ba}
-.v-col h2{margin-top:36px;font-size:18px;font-weight:700;text-transform:uppercase;line-height:1.5}
-.v-col p{margin-top:27px}
-.v-col p + p{margin-top:27px}
-.v-col .v-arrow-link{margin-top:36px}
-.v-col a:not(.v-arrow-link){text-underline-offset:3px}
-
-/* Happy hour */
-.v-hh{padding:54px 0 90px;text-align:center}
-.v-hh img{width:min(664px,100%);height:auto;aspect-ratio:3/2;object-fit:cover;margin:0 auto}
-.v-hh h2{margin-top:36px;font-size:18px;font-weight:700;text-transform:uppercase}
-.v-hh__when{margin-top:27px;text-transform:uppercase}
-.v-hh__when em{text-transform:none}
-.v-hh__body{max-width:825px;margin:27px auto 0}
-.v-hh .v-arrow-link{margin-top:36px}
-
-/* Footer */
-.v-footer{color:var(--v-bg)}
-.v-footer__main{position:relative;background:var(--v-green);padding:76px 0 60px;overflow:hidden}
-.v-footer__deco{position:absolute;right:-40px;top:-70px;width:620px;height:620px;color:rgba(220,211,200,.07);pointer-events:none}
-.v-footer__deco .v-mask{width:100%;height:100%}
-.v-footer__grid{position:relative;display:grid;grid-template-columns:260px 260px 260px 1fr;gap:0;font-size:16px;line-height:1.5}
-.v-footer__grid p{font-size:16px}
-.v-footer__grid a{text-decoration:none}
-.v-footer__grid a:hover{text-decoration:underline;text-underline-offset:3px}
-.v-footer__wordmark{width:200px;height:auto;margin:0 0 30px}
-.v-footer__grid .v-kicker{color:var(--v-bg)}
-.v-footer__grid p + .v-kicker,.v-footer__grid p + p{margin-top:24px}
-.v-footer__grid .v-kicker + p{margin-top:2px}
-.v-footer__hours em{display:block;font-style:italic}
-.v-footer__ig{display:inline-block;margin-top:30px;width:22px;height:22px;color:var(--v-bg)}
-.v-footer__ig svg{width:100%;height:100%;display:block}
-.v-footer__links{display:flex;flex-direction:column;gap:3px}
-.v-footer__links a{line-height:1.5}
-.v-footer__col--news{padding-left:0}
-.v-footer__col--news p{font-style:italic}
-.v-news{display:flex;align-items:flex-end;gap:10px;margin-top:40px;border-bottom:1px solid rgba(220,211,200,.75);padding-bottom:6px}
-.v-news input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:var(--v-bg);font-family:var(--v-serif);font-size:14px;padding:6px 0}
-.v-news input::placeholder{color:rgba(220,211,200,.75)}
-.v-news button{background:none;border:0;padding:0 2px 2px;color:var(--v-bg);cursor:pointer;line-height:1;font-size:18px}
-.v-news button:hover{opacity:.75}
-.v-footer__brands{background:var(--v-bg);padding:45px 0}
-.v-brands{display:flex;justify-content:space-around;align-items:center;gap:40px;flex-wrap:wrap}
-.v-brands a{display:flex;align-items:center;justify-content:center;text-decoration:none;color:#6f6a5e;min-height:48px}
-.v-brands img{height:44px;width:auto;mix-blend-mode:multiply;filter:grayscale(1);opacity:.78}
-.v-brands img.v-brand--round{height:48px}
-.v-brands .v-mask{width:44px;height:44px}
-.v-brands__word{font-family:var(--v-serif);font-size:24px;letter-spacing:.22em;text-transform:uppercase;line-height:1}
-.v-footer__legal{background:var(--v-bg);color:var(--v-ink);text-align:center;padding:20px 0 40px;font-family:var(--v-sans);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-.v-footer__legal a{text-decoration:none}
-
-/* Responsive */
-@media (max-width:1240px){
-  .v-nav a{padding:0 10px;font-size:16px}
-  .v-intro__badge{display:none}
-  .v-footer__grid{grid-template-columns:1fr 1fr 1fr 1.3fr;gap:30px}
-}
-@media (max-width:960px){
-  .v-header__bar{padding:0 20px}
-  .v-nav{display:none}
-  .v-header__cta{margin-left:auto}
-  .v-burger{display:block;margin-left:12px}
-  .v-nav-toggle:checked ~ .v-nav{display:flex;position:absolute;top:73px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--v-bg);border-bottom:1px solid rgba(53,48,45,.18);padding:12px 0 18px}
-  .v-nav-toggle:checked ~ .v-nav a{padding:10px 24px;font-size:20px}
-  .v-intro__title{font-size:28px}
-  .v-cols{grid-template-columns:1fr;gap:54px}
-  .v-footer__grid{grid-template-columns:1fr 1fr}
-  .v-footer__col--news{grid-column:1 / -1}
-}
-@media (max-width:600px){
-  .v-hero{min-height:440px}
-  .v-hero__tag{letter-spacing:.2em;font-size:12px}
-  .v-intro{padding-top:44px}
-  .v-intro__title{font-size:24px}
-  .v-footer__grid{grid-template-columns:1fr}
-  .v-brands{gap:28px}
-}
-</style>
+<link rel="stylesheet" href="/theme.css">
 </head>
 <body>
-<!-- block:sec-1 --><header class="v-header">
+<!-- block:sec-1 --><!-- block:header -->
+<header class="v-header">
   <div class="v-header__bar">
-    <a class="v-header__logo" href="/" aria-label="Volanti Scottsdale home"><span class="v-mask" aria-hidden="true"></span></a>
+    <a class="v-header__logo" href="/" aria-label="Volanti Scottsdale home" aria-current="page"><span class="v-mask" aria-hidden="true"></span></a>
     <input type="checkbox" id="v-nav-toggle" class="v-nav-toggle" aria-hidden="true">
     <ul class="v-nav">
       <li><a href="/menus">Menus</a></li>
@@ -207,7 +68,8 @@ h1,h2,h3,p{margin:0}
     <a class="v-header__cta" href="https://www.sevenrooms.com/explore/volanti/reservations/create/search/" target="_blank" rel="noopener">Reserve a Table</a>
     <label class="v-burger" for="v-nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
   </div>
-</header><!-- /block:sec-1 --><!-- block:sec-2 --><section class="v-hero" aria-label="Volanti Scottsdale">
+</header>
+<!-- /block:header --><!-- /block:sec-1 --><!-- block:sec-2 --><section class="v-hero" aria-label="Volanti Scottsdale">
   <div class="v-hero__slide" style="background-image:url('https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/dfc9bfc995cf8f104d9cc697589eb702.jpg')" role="img" aria-label="Burger, fries and a bottle of champagne with private jets on the runway behind"></div>
   <div class="v-hero__slide" style="background-image:url('https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/4c03d7169d8140414d1d7de5978eaff6.jpg')" role="img" aria-label="Guests sharing brunch plates and cocktails at Volanti"></div>
   <div class="v-hero__slide" style="background-image:url('https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/0b709f8c69746632df462c904e0f3cc7.jpg')" role="img" aria-label="The back bar at Volanti"></div>
@@ -243,7 +105,8 @@ h1,h2,h3,p{margin:0}
   <p class="v-hh__when">Weekdays <em>from</em> 3 – 6 PM<br><em>At the</em> bar <em>and on the</em> patio</p>
   <p class="v-hh__body">Grab a seat at the bar or out on the patio and settle in for a specialty cocktail, a house highball, a local craft beer or a glass of house wine as the evening flights roll in. Graze through Short Rib Tacos, Volanti Meatballs, Tiny Tuna tartare, BBQ Pork Sliders and the Take Off Trio with house focaccia — and toast the sunset with half off all champagne bottles and select red and white wines. With the McDowell Mountains glowing behind the runway, Volanti’s happy hour is the kind of moment you’ll want to escape to often.</p>
   <a class="v-arrow-link" href="/menus">Learn more</a>
-</section><!-- /block:sec-5 --><!-- block:sec-6 --><footer class="v-footer">
+</section><!-- /block:sec-5 --><!-- block:sec-6 --><!-- block:footer -->
+<footer class="v-footer">
   <div class="v-footer__main">
     <div class="v-footer__deco" aria-hidden="true"><span class="v-mask"></span></div>
     <div class="v-wrap v-footer__grid">
@@ -295,7 +158,9 @@ h1,h2,h3,p{margin:0}
     </div>
   </div>
   <div class="v-footer__legal">© 2026 Volanti Scottsdale <span aria-hidden="true">|</span> All rights reserved</div>
-</footer><!-- /block:sec-6 -->
+</footer>
+<!-- /block:footer --><!-- /block:sec-6 -->
+
     <script async src="https://api.tibly.ai/widget/v1.js"></script>
 </body>
 </html>
