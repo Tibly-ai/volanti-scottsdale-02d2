@@ -76,6 +76,9 @@ h1,h2,h3,h4,p,ul,ol{margin:0}
 .v-banner__inner{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:24px}
 .v-banner__title{font-weight:400;font-size:44px;line-height:1.15;text-transform:uppercase;letter-spacing:.04em;text-shadow:0 2px 14px rgba(0,0,0,.4)}
 .v-banner__sub{margin-top:18px;font-family:var(--v-sans);font-weight:500;font-size:14px;letter-spacing:.28em;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.v-banner--video{height:min(560px,70vh);min-height:340px}
+.v-banner__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#2a2622 center/cover no-repeat}
+@media (prefers-reduced-motion:reduce){.v-banner__video{display:none}.v-banner--video{background:#2a2622 url("https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/63c3e97260549c5ba497a87ff686202a.jpg") center/cover no-repeat}}
 .v-banner--short{height:220px;min-height:220px;background:var(--v-green)}
 .v-banner--short::after{display:none}
 .v-banner--short .v-banner__inner{color:var(--v-bg)}
