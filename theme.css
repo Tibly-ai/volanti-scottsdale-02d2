@@ -26,6 +26,9 @@ h1,h2,h3,h4,p,ul,ol{margin:0}
 .v-btn--ghost{background:transparent;color:var(--v-ink);border-color:var(--v-ink)}
 .v-btn--ghost:hover{background:var(--v-ink);color:var(--v-bg)}
 .v-rule{border:0;border-top:1px solid var(--v-rule);margin:0}
+/* Anchor targets land below the sticky 73px header. */
+[id]{scroll-margin-top:73px}
+#book,#reserve-locker,#downloads{scroll-margin-top:96px}
 .v-prose p + p{margin-top:27px}
 .v-prose a{text-underline-offset:3px}
 .v-prose ul{padding-left:1.2em;margin-top:27px}
