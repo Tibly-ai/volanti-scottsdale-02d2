@@ -285,6 +285,10 @@ h1,h2,h3,h4,p,ul,ol{margin:0}
 .v-footer__legal a{text-decoration:none}
 
 /* Responsive */
+@media (max-width:1400px){
+  .v-nav a{padding:0 11px;font-size:16px}
+  .v-header__bar{padding:0 28px}
+}
 @media (max-width:1240px){
   .v-nav a{padding:0 9px;font-size:15px}
   .v-header__word{display:none}
