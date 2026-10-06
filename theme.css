@@ -267,6 +267,10 @@ h1,h2,h3,h4,p,ul,ol{margin:0}
 .v-news input::placeholder{color:rgba(220,211,200,.75)}
 .v-news button{background:none;border:0;padding:0 2px 2px;color:var(--v-bg);cursor:pointer;line-height:1;font-size:18px}
 .v-news button:hover{opacity:.75}
+.v-news-cta{display:inline-flex;align-items:center;gap:8px;margin-top:28px;padding:11px 18px;border:1px solid rgba(220,211,200,.75);font-family:var(--v-sans);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--v-bg)}
+.v-footer__grid a.v-news-cta:hover{background:var(--v-bg);color:var(--v-green);text-decoration:none}
+.v-footer__grid .v-news-alt{margin-top:16px;font-size:14px;font-style:normal}
+.v-footer__grid .v-news-alt a{text-decoration:underline;text-underline-offset:3px}
 .v-footer__brands{background:var(--v-bg);padding:45px 0}
 .v-brands{display:flex;justify-content:space-around;align-items:center;gap:40px;flex-wrap:wrap}
 .v-brands a{display:flex;align-items:center;justify-content:center;text-decoration:none;color:#6f6a5e;min-height:48px}
