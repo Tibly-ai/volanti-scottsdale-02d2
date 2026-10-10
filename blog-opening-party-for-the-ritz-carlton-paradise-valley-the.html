@@ -117,7 +117,8 @@
 .v-cookie__text{margin:0}
 .v-cookie__accept{flex:none;background:none;border:0;padding:0;cursor:pointer;color:inherit;font-family:var(--v-sans,Arial,sans-serif);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;line-height:1.7}
 .v-cookie__accept:hover{text-decoration:underline;text-underline-offset:4px}
-@media (max-width:700px){.v-cookie{flex-direction:column;align-items:flex-start;gap:12px;padding:16px 20px;font-size:14px}}
+body:has([data-tibly-badge]) .v-cookie{padding-right:180px}
+@media (max-width:700px){.v-cookie{flex-direction:column;align-items:flex-start;gap:12px;padding:16px 20px;font-size:14px}body:has([data-tibly-badge]) .v-cookie{padding-right:20px;padding-bottom:60px}}
 </style>
 <script>
 (function(){
