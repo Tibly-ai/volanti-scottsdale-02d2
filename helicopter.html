@@ -135,6 +135,36 @@
   </div>
   <div class="v-footer__legal">© 2026 Volanti Scottsdale <span aria-hidden="true">|</span> All rights reserved</div>
 </footer>
+<div class="v-cookie" id="v-cookie" role="region" aria-label="Cookie notice" hidden>
+  <p class="v-cookie__text">We use cookies to enhance your experience and analyze our traffic. By continuing, you consent to our use of cookies.</p>
+  <button type="button" class="v-cookie__accept" id="v-cookie-accept">Accept <span aria-hidden="true">→</span></button>
+</div>
+<style>
+.v-cookie{position:fixed;left:0;right:0;bottom:0;z-index:900;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 24px;background:var(--v-green,#3f4c38);color:var(--v-bg,#dcd3c8);font-family:var(--v-serif,Georgia,serif);font-size:15px;line-height:1.4;box-shadow:0 -2px 12px rgba(0,0,0,.18)}
+.v-cookie[hidden]{display:none}
+.v-cookie__text{margin:0}
+.v-cookie__accept{flex:none;background:none;border:0;padding:0;cursor:pointer;color:inherit;font-family:var(--v-sans,Arial,sans-serif);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;line-height:1.7}
+.v-cookie__accept:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:700px){.v-cookie{flex-direction:column;align-items:flex-start;gap:12px;padding:16px 20px;font-size:14px}}
+</style>
+<script>
+(function(){
+  var KEY="volanti_cookie_consent";
+  var accepted=false;
+  try{accepted=localStorage.getItem(KEY)==="accepted";}catch(e){}
+  if(!accepted&&document.cookie.indexOf(KEY+"=accepted")!==-1){accepted=true;}
+  var el=document.getElementById("v-cookie");
+  if(!el||accepted){return;}
+  el.hidden=false;
+  var btn=document.getElementById("v-cookie-accept");
+  if(!btn){return;}
+  btn.addEventListener("click",function(){
+    try{localStorage.setItem(KEY,"accepted");}catch(e){}
+    document.cookie=KEY+"=accepted; max-age=31536000; path=/; SameSite=Lax";
+    el.hidden=true;
+  });
+})();
+</script>
 
 <!-- /block:footer --><!-- /block:sec-5 -->
 
