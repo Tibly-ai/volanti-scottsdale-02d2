@@ -3,7 +3,7 @@
 :root{
   --v-bg:#dcd3c8;
   --v-ink:#35302d;
-  --v-green:#3f4c38;
+  --v-green:rgba(36,36,35,1);
   --v-rule:rgba(53,48,45,.18);
   --v-serif:"Libre Caslon Text","Adobe Caslon Pro",Georgia,"Times New Roman",serif;
   --v-sans:"Jost","Commuters Sans","Helvetica Neue",Arial,sans-serif;
