@@ -344,11 +344,12 @@ h1,h2,h3,h4,p,ul,ol{margin:0}
   .v-wine li{grid-template-columns:1fr 2.8em 2.8em;gap:4px 12px}
 }
 
-/* Nav dropdown — About: Blog · FAQs · Careers */
+/* Nav dropdown — About: Blog · FAQs · Careers (hover/focus on desktop, tap-to-expand accordion in the phone menu) */
 .v-nav>li{display:flex;align-items:center;min-height:73px}
 .v-nav__group{position:relative}
-.v-nav__group-btn{display:flex;align-items:center;gap:7px;margin:0;padding:0 15px;font:inherit;font-size:18px;color:inherit;background:none;border:0;cursor:pointer;white-space:nowrap}
-.v-nav__group-btn::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-3px) rotate(45deg)}
+.v-nav__check{position:absolute;opacity:0;width:1px;height:1px;margin:0;pointer-events:none}
+.v-nav__group-btn{display:flex;align-items:center;gap:7px;margin:0;padding:0 15px;font:inherit;font-size:18px;color:inherit;background:none;border:0;cursor:pointer;white-space:nowrap;user-select:none}
+.v-nav__group-btn::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-3px) rotate(45deg);transition:transform .15s}
 .v-nav__group:hover>.v-nav__group-btn,.v-nav__group:focus-within>.v-nav__group-btn,.v-nav__group:has(a[aria-current="page"])>.v-nav__group-btn{text-decoration:underline;text-underline-offset:5px}
 .v-nav__sub{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:170px;margin:0;padding:8px 0;list-style:none;background:var(--v-bg);border:1px solid var(--v-rule);border-top:0}
 .v-nav__group:hover>.v-nav__sub,.v-nav__group:focus-within>.v-nav__sub{display:block}
@@ -363,8 +364,10 @@ h1,h2,h3,h4,p,ul,ol{margin:0}
 }
 @media (max-width:1080px){
   .v-nav-toggle:checked ~ .v-nav>li{display:block;min-height:0}
-  .v-nav-toggle:checked ~ .v-nav .v-nav__group-btn{padding:10px 24px;font-size:20px;pointer-events:none}
-  .v-nav-toggle:checked ~ .v-nav .v-nav__group-btn::after{display:none}
-  .v-nav-toggle:checked ~ .v-nav .v-nav__sub{display:block;position:static;transform:none;min-width:0;padding:0;border:0}
+  .v-nav-toggle:checked ~ .v-nav .v-nav__group-btn{width:100%;justify-content:space-between;padding:10px 28px 10px 24px;font-size:20px;text-decoration:none}
+  .v-nav-toggle:checked ~ .v-nav .v-nav__group-btn::after{width:9px;height:9px;transform:translateY(-3px) rotate(45deg)}
+  .v-nav-toggle:checked ~ .v-nav .v-nav__check:checked ~ .v-nav__group-btn::after{transform:translateY(3px) rotate(-135deg)}
+  .v-nav-toggle:checked ~ .v-nav .v-nav__sub{display:none;position:static;transform:none;min-width:0;padding:0 0 6px;border:0}
+  .v-nav-toggle:checked ~ .v-nav .v-nav__check:checked ~ .v-nav__sub{display:block}
   .v-nav-toggle:checked ~ .v-nav .v-nav__sub a{padding:8px 24px 8px 44px;font-size:18px}
 }
