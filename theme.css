@@ -5,8 +5,9 @@
   --v-ink:#35302d;
   --v-green:rgba(36,36,35,1);
   --v-rule:rgba(53,48,45,.18);
-  --v-serif:"Libre Caslon Text","Adobe Caslon Pro",Georgia,"Times New Roman",serif;
-  --v-sans:"Jost","Commuters Sans","Helvetica Neue",Arial,sans-serif;
+  --v-serif:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --v-sans:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --v-display:"Fino Sans","fino-sans","Montserrat","Helvetica Neue",Arial,sans-serif;
   --v-compass:url("https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/44751bacd7902a40f271d026bd958233.webp");
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -15,6 +16,7 @@ body{margin:0;background:var(--v-bg);color:var(--v-ink);font-family:var(--v-seri
 a{color:inherit}
 img{max-width:100%;height:auto;display:block}
 h1,h2,h3,h4,p,ul,ol{margin:0}
+h1,h2,h3,.v-header__word,.v-brands__word,.v-feature__price{font-family:var(--v-display)}
 .v-wrap{width:min(1200px,calc(100% - 48px));margin:0 auto}
 .v-narrow{width:min(820px,calc(100% - 48px));margin:0 auto}
 .v-kicker{font-family:var(--v-sans);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;line-height:1.3}
