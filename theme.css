@@ -4,6 +4,8 @@
   --v-bg:#f3f0ec;
   --v-ink:#35302d;
   --v-green:rgba(36,36,35,1);
+  --v-btn:#3f4c38;
+  --v-btn-hover:#4b5a43;
   --v-rule:rgba(53,48,45,.18);
   --v-serif:"Montserrat","Helvetica Neue",Arial,sans-serif;
   --v-sans:"Montserrat","Helvetica Neue",Arial,sans-serif;
@@ -23,8 +25,8 @@ h1,h2,h3,.v-header__word,.v-brands__word,.v-feature__price{font-family:var(--v-d
 .v-arrow-link{display:inline-block;font-family:var(--v-sans);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;line-height:1.7}
 .v-arrow-link::after{content:"\2192";margin-left:.45em}
 .v-arrow-link:hover{text-decoration:underline;text-underline-offset:4px}
-.v-btn{display:inline-block;font-family:var(--v-sans);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--v-bg);background:var(--v-green);text-decoration:none;padding:12px 22px;line-height:16px;border:1px solid var(--v-green);cursor:pointer}
-.v-btn:hover{background:#000}
+.v-btn{display:inline-block;font-family:var(--v-sans);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--v-bg);background:var(--v-btn);text-decoration:none;padding:12px 22px;line-height:16px;border:1px solid var(--v-green);cursor:pointer}
+.v-btn:hover{background:var(--v-btn-hover)}
 .v-btn--ghost{background:transparent;color:var(--v-ink);border-color:var(--v-ink)}
 .v-btn--ghost:hover{background:var(--v-ink);color:var(--v-bg)}
 .v-rule{border:0;border-top:1px solid var(--v-rule);margin:0}
@@ -50,8 +52,8 @@ h1,h2,h3,.v-header__word,.v-brands__word,.v-feature__price{font-family:var(--v-d
 .v-nav a{display:block;padding:0 15px;font-size:18px;text-decoration:none;white-space:nowrap}
 .v-nav a:hover{text-decoration:underline;text-underline-offset:5px}
 .v-nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:5px}
-.v-header__cta{font-family:var(--v-sans);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--v-bg);background:var(--v-green);text-decoration:none;padding:7px 18px;line-height:16px;white-space:nowrap}
-.v-header__cta:hover{background:#000}
+.v-header__cta{font-family:var(--v-sans);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--v-bg);background:var(--v-btn);text-decoration:none;padding:7px 18px;line-height:16px;white-space:nowrap}
+.v-header__cta:hover{background:var(--v-btn-hover)}
 .v-burger{display:none;width:44px;height:44px;margin-left:auto;background:none;border:0;padding:10px;cursor:pointer;color:var(--v-ink)}
 .v-burger span{display:block;height:2px;background:currentColor;margin:5px 0}
 .v-nav-toggle{display:none}
@@ -97,6 +99,7 @@ h1,h2,h3,.v-header__word,.v-brands__word,.v-feature__price{font-family:var(--v-d
 .v-intro__badge img{width:134px;height:134px}
 .v-cols{display:grid;grid-template-columns:1fr 1fr;gap:45px;padding:54px 0}
 .v-col img,.v-col .v-map{width:100%;height:auto;aspect-ratio:665/800;object-fit:cover}
+.v-col img.v-map-img{aspect-ratio:auto;object-fit:contain;display:block}
 .v-map{display:block;border:0;filter:grayscale(1) sepia(.42) brightness(1.04) contrast(.92);background:#cfc6ba}
 .v-col h2{margin-top:36px;font-size:18px;font-weight:700;text-transform:uppercase;line-height:1.5}
 .v-col p{margin-top:27px}
