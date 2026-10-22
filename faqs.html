@@ -204,15 +204,16 @@ body:has([data-tibly-badge]) .v-cookie{padding-right:180px}
 @media (max-width:760px){
   .v-promo{padding:12px}
   .v-promo__card{grid-template-columns:1fr;max-height:calc(100vh - 24px)}
-  .v-promo__poster{height:auto;max-height:32vh;object-position:top}
+  .v-promo__poster{height:min(48vh,440px);object-fit:contain;background:#393b40}
   .v-promo__title{display:none}
-  .v-promo__body{padding:26px 20px 24px}
+  .v-promo__body{padding:22px 20px 22px}
   .v-promo__title{font-size:38px}
   .v-promo__sub{margin-top:10px;font-size:13px}
-  .v-promo__count{gap:8px;margin-top:20px}
+  .v-promo__count{gap:8px;margin-top:16px}
   .v-promo__cell{min-width:0;flex:1;padding:10px 4px 8px}
   .v-promo__num{font-size:28px}
-  .v-promo__cta{margin-top:22px;padding:13px 28px}
+  .v-promo__cta{margin-top:18px;padding:13px 28px}
+  .v-promo__later{margin-top:12px}
 }
 </style>
 <script>
