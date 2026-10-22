@@ -173,7 +173,106 @@ body:has([data-tibly-badge]) .v-cookie{padding-right:180px}
   });
 })();
 </script>
-
+<div class="v-promo" id="v-promo" role="dialog" aria-modal="true" aria-labelledby="v-promo-title" hidden>
+  <div class="v-promo__backdrop" data-promo-close></div>
+  <div class="v-promo__card">
+    <button type="button" class="v-promo__close" data-promo-close aria-label="Close">&times;</button>
+    <img class="v-promo__poster" src="https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/83550a400f978aa63ec5fe901375f1e4.jpg" alt="Run the Runway — Scottsdale Airport, October 25. Title sponsor Pinnacle Aviation. Volanti × PHX Run Club." width="833" height="1024">
+    <div class="v-promo__body">
+      <p class="v-promo__kicker">Volanti &times; PHX Run Club</p>
+      <h2 class="v-promo__title" id="v-promo-title">Run the<br>Runway</h2>
+      <p class="v-promo__sub">A 5K on an actual runway &middot; Scottsdale Airport<br>Sunday, October 25 &middot; 8:30 AM</p>
+      <div class="v-promo__count" aria-live="off">
+        <div class="v-promo__cell"><span class="v-promo__num" data-promo="d">00</span><span class="v-promo__lbl">Days</span></div>
+        <div class="v-promo__cell"><span class="v-promo__num" data-promo="h">00</span><span class="v-promo__lbl">Hours</span></div>
+        <div class="v-promo__cell"><span class="v-promo__num" data-promo="m">00</span><span class="v-promo__lbl">Mins</span></div>
+        <div class="v-promo__cell"><span class="v-promo__num" data-promo="s">00</span><span class="v-promo__lbl">Secs</span></div>
+      </div>
+      <a class="v-promo__cta" href="https://runtherunwayaz.org" target="_blank" rel="noopener" data-promo-cta>Register Now</a>
+      <button type="button" class="v-promo__later" data-promo-close>Maybe later</button>
+    </div>
+  </div>
+</div>
+<style>
+.v-promo{position:fixed;inset:0;z-index:950;display:flex;align-items:center;justify-content:center;padding:16px}
+.v-promo[hidden]{display:none}
+.v-promo__backdrop{position:absolute;inset:0;background:rgba(20,20,19,.72)}
+.v-promo__card{position:relative;display:grid;grid-template-columns:360px 1fr;width:min(820px,100%);max-height:calc(100vh - 32px);overflow:auto;background:#2a2d31;color:#fff;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.v-promo__close{position:absolute;top:8px;right:8px;z-index:2;width:40px;height:40px;border:0;background:rgba(0,0,0,.45);color:#fff;font-size:28px;line-height:40px;cursor:pointer;border-radius:50%}
+.v-promo__close:hover{background:rgba(0,0,0,.7)}
+.v-promo__close:focus-visible,.v-promo__cta:focus-visible,.v-promo__later:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.v-promo__poster{display:block;width:100%;height:100%;object-fit:cover}
+.v-promo__body{display:flex;flex-direction:column;justify-content:center;padding:40px 40px 34px;text-align:center;font-family:var(--v-sans)}
+.v-promo__kicker{margin:0;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#c9c4bc}
+.v-promo__title{margin:14px 0 0;font-family:var(--v-sans);font-weight:900;font-style:italic;font-size:48px;line-height:.92;text-transform:uppercase;letter-spacing:-.01em;color:#fff;text-shadow:0 0 18px rgba(235,51,45,.95),0 0 3px rgba(235,51,45,.9)}
+.v-promo__sub{margin:18px 0 0;font-size:14px;line-height:1.6;color:#e6e2db}
+.v-promo__count{display:flex;justify-content:center;gap:10px;margin-top:26px}
+.v-promo__cell{display:flex;flex-direction:column;align-items:center;min-width:66px;padding:12px 6px 10px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.1)}
+.v-promo__num{font-weight:800;font-style:italic;font-size:34px;line-height:1;color:#fff;font-variant-numeric:tabular-nums;text-shadow:0 0 12px rgba(235,51,45,.9),0 0 2px rgba(235,51,45,.8)}
+.v-promo__lbl{margin-top:8px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#c9c4bc}
+.v-promo__cta{display:inline-block;margin:28px auto 0;padding:14px 34px;background:#eb332d;color:#fff;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+.v-promo__cta:hover{background:#c92722}
+.v-promo__later{margin:16px auto 0;border:0;background:none;color:#c9c4bc;font:inherit;font-size:13px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.v-promo__later:hover{color:#fff}
+@media (max-width:760px){
+  .v-promo{padding:12px}
+  .v-promo__card{grid-template-columns:1fr;max-height:calc(100vh - 24px)}
+  .v-promo__poster{height:auto;max-height:32vh;object-position:top}
+  .v-promo__title{display:none}
+  .v-promo__body{padding:26px 20px 24px}
+  .v-promo__title{font-size:38px}
+  .v-promo__sub{margin-top:10px;font-size:13px}
+  .v-promo__count{gap:8px;margin-top:20px}
+  .v-promo__cell{min-width:0;flex:1;padding:10px 4px 8px}
+  .v-promo__num{font-size:28px}
+  .v-promo__cta{margin-top:22px;padding:13px 28px}
+}
+</style>
+<script>
+(function(){
+  var TARGET=Date.parse("2026-10-25T08:30:00-07:00");
+  var KEY="volanti_rtr_promo";
+  var el=document.getElementById("v-promo");
+  if(!el){return;}
+  if(!(Date.now()<TARGET)){el.parentNode.removeChild(el);return;}
+  var dismissed=false;
+  try{dismissed=sessionStorage.getItem(KEY)==="dismissed";}catch(e){}
+  if(dismissed){return;}
+  var cells={};
+  var nodes=el.querySelectorAll("[data-promo]");
+  for(var i=0;i<nodes.length;i++){cells[nodes[i].getAttribute("data-promo")]=nodes[i];}
+  function pad(n){return (n<10?"0":"")+n;}
+  var timer=null;
+  function close(){
+    el.hidden=true;
+    if(timer){clearInterval(timer);}
+    try{sessionStorage.setItem(KEY,"dismissed");}catch(e){}
+    document.removeEventListener("keydown",onKey);
+  }
+  function onKey(e){if(e.key==="Escape"){close();}}
+  function tick(){
+    var left=TARGET-Date.now();
+    if(left<=0){close();el.parentNode&&el.parentNode.removeChild(el);return;}
+    var s=Math.floor(left/1000);
+    cells.d.textContent=pad(Math.floor(s/86400));
+    cells.h.textContent=pad(Math.floor(s%86400/3600));
+    cells.m.textContent=pad(Math.floor(s%3600/60));
+    cells.s.textContent=pad(s%60);
+  }
+  var closers=el.querySelectorAll("[data-promo-close]");
+  for(var j=0;j<closers.length;j++){closers[j].addEventListener("click",close);}
+  var cta=el.querySelector("[data-promo-cta]");
+  if(cta){cta.addEventListener("click",function(){try{sessionStorage.setItem(KEY,"dismissed");}catch(e){}});}
+  setTimeout(function(){
+    tick();
+    el.hidden=false;
+    timer=setInterval(tick,1000);
+    document.addEventListener("keydown",onKey);
+    var c=el.querySelector(".v-promo__close");
+    if(c){try{c.focus({preventScroll:true});}catch(e){c.focus();}}
+  },900);
+})();
+</script>
 <!-- /block:footer --><!-- /block:sec-5 -->
 
     <script async src="https://api.tibly.ai/widget/v1.js"></script>
