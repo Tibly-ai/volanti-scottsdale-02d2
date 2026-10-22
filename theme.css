@@ -46,6 +46,7 @@ h1,h2,h3,.v-header__word,.v-brands__word,.v-feature__price{font-family:var(--v-d
 .v-header__bar{display:flex;align-items:center;gap:16px;height:73px;padding:0 35px}
 .v-header__logo{color:var(--v-green);display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}
 .v-header__logo img{height:46px;width:auto;display:block}
+.v-header__logo img.v-header__logo-mark{display:none}
 .v-header__word{font-family:var(--v-serif);font-size:19px;letter-spacing:.24em;text-transform:uppercase;line-height:1;padding-top:2px}
 .v-header__logo:hover .v-header__word{text-decoration:underline;text-underline-offset:5px}
 .v-nav{flex:1;display:flex;justify-content:center;align-items:center;gap:0;list-style:none;margin:0;padding:0}
@@ -327,6 +328,10 @@ h1,h2,h3,.v-header__word,.v-brands__word,.v-feature__price{font-family:var(--v-d
   .v-banner__title{font-size:34px}
 }
 @media (max-width:600px){
+  .v-header__logo img.v-header__logo-full{display:none}
+  .v-header__logo img.v-header__logo-mark{display:block;height:44px}
+  .v-header__cta{font-size:13px;padding:7px 14px}
+  .v-burger{margin-left:4px}
   .v-hero{min-height:440px}
   .v-hero__tag{letter-spacing:.2em;font-size:12px}
   .v-intro{padding-top:44px}
