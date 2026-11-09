@@ -400,3 +400,48 @@ h1,h2,h3,.v-header__word,.v-brands__word,.v-feature__price{font-family:var(--v-d
   .v-nav-toggle:checked ~ .v-nav .v-nav__group-arrow::after{width:9px;height:9px;transform:translateY(-1px) rotate(45deg)}
   .v-nav-toggle:checked ~ .v-nav .v-nav__check:checked ~ .v-nav__group-btn .v-nav__group-arrow::after{transform:translateY(4.5px) rotate(-135deg)}
 }
+
+/* Events page (/events) — the former volantihangarevents.com folded into one page */
+.v-banner--events{height:min(560px,68vh);min-height:360px}
+.v-banner__btn{margin-top:30px}
+.v-subnav .v-tabs__bar a{display:block;padding:16px 18px;font-family:var(--v-sans);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px}
+.v-subnav .v-tabs__bar a:first-child{margin-left:auto}
+.v-subnav .v-tabs__bar a:last-child{margin-right:auto}
+.v-subnav .v-tabs__bar a:hover{border-bottom-color:var(--v-rule)}
+.v-subnav .v-tabs__bar a.is-active{border-bottom-color:var(--v-ink)}
+.v-subnav .v-tabs__bar a.v-subnav__book{color:var(--v-btn);font-weight:700}
+.v-events [id]{scroll-margin-top:128px}
+.v-capacity h3{font-family:var(--v-display);font-weight:400;font-size:22px;letter-spacing:.04em}
+.v-section--venues{padding-top:0}
+.v-split--media-left .v-split__media{order:-1}
+.v-venue .v-h2,.v-section--food .v-h2,.v-section--story .v-h2{font-size:28px;font-weight:400;line-height:1.25;letter-spacing:.02em}
+.v-venue{margin-top:72px;padding-top:72px;border-top:1px solid var(--v-rule)}
+.v-venue__sub{margin-top:30px;font-family:var(--v-sans);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--v-green)}
+.v-amenities{margin:14px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:16px}
+.v-amenities li{padding-left:18px;position:relative}
+.v-amenities li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border:1px solid var(--v-ink);transform:rotate(45deg)}
+.v-amenities + .v-btn{margin-top:32px}
+.v-split__media--pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.v-split__media--pair img{aspect-ratio:3/4}
+.v-gallery--events img{aspect-ratio:4/3}
+.v-gallery--food{grid-template-columns:1fr 1fr;gap:16px}
+.v-gallery--food img{aspect-ratio:1}
+.v-venue__links{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px;margin-top:32px}
+.v-split__text .v-venue__links .v-btn,.v-split__text .v-venue__links .v-arrow-link{margin-top:0}
+.v-cards--two{grid-template-columns:1fr 1fr;max-width:900px;margin-left:auto;margin-right:auto}
+.v-section--book .v-fine{margin-top:28px}
+@media (max-width:1080px){
+  .v-venue{margin-top:56px;padding-top:56px}
+  .v-split--media-left .v-split__media{order:0}
+  .v-venue .v-h2,.v-section--food .v-h2,.v-section--story .v-h2{font-size:24px}
+  .v-cards--two{grid-template-columns:1fr 1fr}
+  .v-events [id]{scroll-margin-top:124px}
+}
+@media (max-width:600px){
+  .v-banner--events{height:min(480px,70vh)}
+  .v-amenities{grid-template-columns:1fr}
+  .v-cards--two{grid-template-columns:1fr}
+  .v-gallery--events{grid-template-columns:1fr 1fr}
+  .v-capacity{grid-template-columns:1fr 1fr;gap:28px 16px}
+  .v-capacity h3{font-size:19px}
+}
