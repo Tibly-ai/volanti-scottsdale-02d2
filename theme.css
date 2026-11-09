@@ -402,7 +402,8 @@ h1,h2,h3,.v-header__word,.v-brands__word,.v-feature__price{font-family:var(--v-d
 }
 
 /* Events page (/events) — the former volantihangarevents.com folded into one page */
-.v-banner--events{height:min(560px,68vh);min-height:360px}
+.v-banner--events{height:min(827px,calc(100vh - 73px));min-height:520px}
+.v-banner--events .v-banner__title{font-size:52px}
 .v-banner__btn{margin-top:30px}
 .v-subnav .v-tabs__bar a{display:block;padding:16px 18px;font-family:var(--v-sans);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px}
 .v-subnav .v-tabs__bar a:first-child{margin-left:auto}
@@ -438,10 +439,12 @@ h1,h2,h3,.v-header__word,.v-brands__word,.v-feature__price{font-family:var(--v-d
   .v-events [id]{scroll-margin-top:124px}
 }
 @media (max-width:600px){
-  .v-banner--events{height:min(480px,70vh)}
+  .v-banner--events{height:calc(100svh - 73px);min-height:440px}
+  .v-banner--events .v-banner__title{font-size:34px}
   .v-amenities{grid-template-columns:1fr}
   .v-cards--two{grid-template-columns:1fr}
   .v-gallery--events{grid-template-columns:1fr 1fr}
   .v-capacity{grid-template-columns:1fr 1fr;gap:28px 16px}
   .v-capacity h3{font-size:19px}
 }
+@media (prefers-reduced-motion:reduce){.v-banner--events{background-image:url("https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/eea93c0e25d2a59458d489c920004409.jpg")}}
