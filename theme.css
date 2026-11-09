@@ -18,6 +18,7 @@ body{margin:0;background:var(--v-bg);color:var(--v-ink);font-family:var(--v-seri
 a{color:inherit}
 img{max-width:100%;height:auto;display:block}
 h1,h2,h3,h4,p,ul,ol{margin:0}
+p,li,h1,h2,h3{text-wrap:pretty}
 h1,h2,h3,.v-header__word,.v-brands__word,.v-feature__price{font-family:var(--v-display)}
 .v-wrap{width:min(1200px,calc(100% - 48px));margin:0 auto}
 .v-narrow{width:min(820px,calc(100% - 48px));margin:0 auto}
