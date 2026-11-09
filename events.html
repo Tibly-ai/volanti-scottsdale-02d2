@@ -257,7 +257,7 @@
     if(active===current){return;}
     current=active;
     for(var j=0;j<items.length;j++){items[j].a.classList.toggle("is-active",items[j]===active);}
-    if(active&&active.a.scrollIntoView){try{active.a.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"});}catch(e){}}
+    if(active){var bar=active.a.parentNode,left=active.a.offsetLeft-(bar.clientWidth-active.a.offsetWidth)/2;try{bar.scrollTo({left:left,behavior:"smooth"});}catch(e){bar.scrollLeft=left;}}
   }
   function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update);}}
   window.addEventListener("scroll",onScroll,{passive:true});
