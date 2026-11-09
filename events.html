@@ -240,29 +240,30 @@
 <script>
 (function(){
   var nav=document.getElementById("v-subnav");
-  if(!nav||!("IntersectionObserver" in window)){return;}
-  var links=nav.querySelectorAll("a[href^='#']");
-  var map={};
+  if(!nav){return;}
+  var links=nav.querySelectorAll("a[href^='#']"),items=[];
   for(var i=0;i<links.length;i++){
-    var id=links[i].getAttribute("href").slice(1);
-    var sec=document.getElementById(id);
-    if(sec){map[id]=links[i];}
+    var sec=document.getElementById(links[i].getAttribute("href").slice(1));
+    if(sec){items.push({a:links[i],sec:sec});}
   }
-  var current=null;
-  function setActive(id){
-    if(current===id){return;}
-    current=id;
-    for(var k in map){map[k].classList.toggle("is-active",k===id);}
-    var a=map[id];
-    if(a&&a.scrollIntoView){try{a.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"});}catch(e){}}
+  var current=null,ticking=false,OFFSET=150;
+  function update(){
+    ticking=false;
+    var active=null;
+    for(var i=0;i<items.length;i++){
+      if(items[i].sec.getBoundingClientRect().top<=OFFSET){active=items[i];}
+    }
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2){active=items[items.length-1];}
+    if(active===current){return;}
+    current=active;
+    for(var j=0;j<items.length;j++){items[j].a.classList.toggle("is-active",items[j]===active);}
+    if(active&&active.a.scrollIntoView){try{active.a.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"});}catch(e){}}
   }
-  var visible={};
-  var io=new IntersectionObserver(function(entries){
-    for(var i=0;i<entries.length;i++){visible[entries[i].target.id]=entries[i].isIntersecting;}
-    var ids=Object.keys(map);
-    for(var j=0;j<ids.length;j++){if(visible[ids[j]]){setActive(ids[j]);return;}}
-  },{rootMargin:"-140px 0px -55% 0px",threshold:0});
-  for(var id in map){io.observe(document.getElementById(id));}
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update);}}
+  window.addEventListener("scroll",onScroll,{passive:true});
+  window.addEventListener("resize",onScroll);
+  window.addEventListener("load",update);
+  update();
 })();
 </script><!-- /block:sec-9 --><!-- block:sec-10 --><!-- block:footer -->
 <footer class="v-footer">
