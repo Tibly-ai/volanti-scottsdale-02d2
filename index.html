@@ -80,7 +80,31 @@
     <label class="v-burger" for="v-nav-toggle" aria-label="Open menu"><span></span><span></span></label>
   </div>
 </header>
-<!-- /block:header --><!-- /block:sec-1 --><!-- block:sec-2 --><section class="v-hero" aria-label="Volanti Scottsdale">
+<!-- /block:header --><!-- /block:sec-1 --><!-- block:holiday-hours --><section class="v-bfhours" id="v-bfhours" aria-label="Black Friday hours">
+  <div class="v-wrap v-bfhours__inner">
+    <p class="v-bfhours__title">Black Friday</p>
+    <ul class="v-bfhours__list">
+      <li><span>Brunch</span> 11am &ndash; 3pm</li>
+      <li><span>Dinner</span> 3pm &ndash; 10pm</li>
+      <li><span>Cocktail Happy Hour</span> 3pm &ndash; 6pm</li>
+    </ul>
+  </div>
+  <style>
+    .v-bfhours{background:var(--v-btn);color:var(--v-bg);font-family:var(--v-sans);font-size:13px;letter-spacing:.1em;line-height:1.5}
+    .v-bfhours__inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 28px;min-height:46px;padding-top:10px;padding-bottom:10px}
+    .v-bfhours__title{margin:0;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding-right:28px;border-right:1px solid rgba(243,240,236,.4)}
+    .v-bfhours__list{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 28px;margin:0;padding:0;list-style:none}
+    .v-bfhours__list li{white-space:nowrap}
+    .v-bfhours__list span{font-weight:600;text-transform:uppercase;margin-right:6px}
+    @media (min-width:1081px){.v-bfhours + .v-hero{height:min(827px,calc(100vh - 73px - 46px))}}
+    @media (max-width:860px){
+      .v-bfhours__inner{flex-direction:column;gap:6px;padding-top:14px;padding-bottom:14px}
+      .v-bfhours__title{padding-right:0;border-right:0}
+      .v-bfhours__list{flex-direction:column;align-items:center;gap:2px}
+    }
+  </style>
+  <script>(function(){var el=document.getElementById("v-bfhours");if(el&&Date.now()>=Date.parse("2026-11-28T00:00:00-07:00")){el.parentNode.removeChild(el);}})();</script>
+</section><!-- /block:holiday-hours --><!-- block:sec-2 --><section class="v-hero" aria-label="Volanti Scottsdale">
   <video class="v-hero__video" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#2a2622" autoplay muted loop playsinline preload="metadata" poster="https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/63c3e97260549c5ba497a87ff686202a.jpg" aria-hidden="true">
     <source src="https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/836d653abfe7908887387d91fda0c35c.mp4" type="video/mp4" media="(max-width: 700px)">
     <source src="https://br-winter-boat-ajcnusyq.storage.c-3.us-east-2.aws.neon.tech/tibly-site-media/sites/6f0e229c-3b4d-4111-82c9-686d3afee875/27eca1cf983d61e79a51d1b527a40e42.mp4" type="video/mp4">
